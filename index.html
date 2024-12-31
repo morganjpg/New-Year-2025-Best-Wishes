@@ -20,6 +20,7 @@
             background-image: url('https://img.freepik.com/premium-vector/2025-happy-new-year-design-vector-trendy-new-year-2025-design-template_884536-813.jpg?w=996');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed; /* Keeps the background fixed on scroll */
             color: white;
             font-family: 'Arial', sans-serif;
         }
@@ -112,6 +113,11 @@
             .marquee {
                 font-size: 16px;
             }
+
+            body, html {
+                background-size: contain;  /* Adjust image scaling for smaller screens */
+                background-position: center top;  /* Keep image aligned to the top */
+            }
         }
 
         @media (max-width: 480px) {
@@ -130,6 +136,11 @@
 
             .marquee {
                 font-size: 14px;
+            }
+
+            body, html {
+                background-size: contain;  /* Ensure the image doesn't crop */
+                background-position: center top;  /* Align top of image to screen */
             }
         }
     </style>
